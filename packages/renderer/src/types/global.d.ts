@@ -1,11 +1,10 @@
-type TableProps = {
+type TableAbstract = {
   columns: string[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  rows: Array<Record<string, any>>;
+  rows: (string | number)[][];
 };
 
 type ChartCanvasProps = {
-  tableData: TableProps;
+  tableData: TableAbstract;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartOption: any;
 };

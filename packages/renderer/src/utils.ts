@@ -1,6 +1,4 @@
-export async function fetchTableData(): Promise<TableProps> {
-  await new Promise((r) => setTimeout(r, 500));
-
+export async function fetchTableData(): Promise<TableAbstract> {
   return {
     columns: ["日期", "销量", "利润", "客户数"],
     rows: [
@@ -14,7 +12,7 @@ export async function fetchTableData(): Promise<TableProps> {
 }
 
 export async function fetchChartOption(
-  tableData: TableProps,
+  tableData: TableAbstract,
 ): Promise<ChartOption> {
   const response = await fetch("http://localhost:3001/chart-option", {
     method: "POST",

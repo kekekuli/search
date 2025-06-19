@@ -1,5 +1,5 @@
 interface TableViewProps {
-  tableData: TableProps;
+  tableData: TableAbstract;
 }
 
 export default function TableView({ tableData }: TableViewProps) {
